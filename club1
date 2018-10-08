@@ -1,0 +1,16 @@
+
+<?php
+$servername = "localhost:3306";
+$username = "root";
+$password = "";
+$fixture="fixture";
+
+// Create connection
+$cn = mysqli_connect($servername, $username, $password,$fixture);
+$rs= mysqli_query($cn,"select * from club1; " );
+$row= mysqli_fetch_assoc($rs);
+
+echo( "cant de filas: ".mysqli_num_rows($rs)." - equipo : ".$row["equipo"]);
+
+//echo(mysqli_get_host_info($cn));
+?>
